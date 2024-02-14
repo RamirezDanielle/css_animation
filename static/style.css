@@ -58,22 +58,83 @@
     animation-iteration-count: 4;
     animation-timing-function: ease-in;
     animation-duration: alternate; */
+    animation-fill-mode: both;
 
     /* shorthand */
-    animation: grow 1s ease 1s 4 alternate;
+    animation: supersize 2s ease-out 0s 4 alternate;
 
 
 }
 
-@keyframes grow{
+@keyframes supersize {
     /* from {width: 50px; height: 50px; background: black;}
     to {width: 50px; height: 100px; background: green;} */
-    from {width: 100px; height: 100px; background: black;}
-    to {width: 10px; height: 10px; background: green;}
+    0% {width: 10px; height: 10px; background: white;}
+    50% {width: 20px; height: 20px; background: green;}
+    100% {width: 50px; height: 50px; background: green;}
 
 }
 
 
 img {
     width: 100%;
+}
+
+#enter {
+    margin: 0;
+    padding: 0;
+    font-family: "Libre Barcode 39 Text", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background: black;
+    background-image: url("/static/background.jpeg");
+    background-size: cover;
+    animation: expand-fade-in; 
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/static/background.jpeg");
+    background-size: cover;
+    animation: expand-fade-in; 
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+
+.red-pill {
+    color: red;
+    font-size: 15em;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+.blue-pill {
+    color:blue;
+    font-size: 15em;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    animation-delay: 3s;
+}
+
+@keyframes expand-fade-in {
+    from {opacity: 0%; width: 0%;}
+    to {opacity: 100%; width: 100%;}
+    
+}
+
+@keyframes fade-in {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
 }
