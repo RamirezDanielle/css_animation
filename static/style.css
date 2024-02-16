@@ -16,6 +16,8 @@
     letter-spacing: 20px;
 } */
 
+/* index.html */
+
 .title-wrapper {
     text-align: center;
     font-size: 4em;
@@ -47,6 +49,9 @@
     cursor: pointer;
 }
 
+
+/* box.html */
+
 .box {
     width: 50px;
     height: 50px;
@@ -63,18 +68,79 @@
     /* shorthand */
     animation: supersize 2s ease-out 0s 4 alternate;
 
-
 }
 
 @keyframes supersize {
     /* from {width: 50px; height: 50px; background: black;}
     to {width: 50px; height: 100px; background: green;} */
-    0% {width: 10px; height: 10px; background: white;}
+    0% {width: 10px; height: 10px; background: black;}
     50% {width: 20px; height: 20px; background: green;}
     100% {width: 50px; height: 50px; background: green;}
-
 }
 
+/* .box-2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: black;
+    border: 2px solid green;
+    animation-name: transform;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+} */
+/* 
+@keyframes transform { */
+    /* shorthand:
+    100% {transform: scale(2,4);} */
+    /* 100% {transform: scaleX(2) scaleY(4);}
+} */
+
+/* .box-3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: black;
+    border: 2px solid green;
+    animation-name: transform;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+} 
+
+@keyframes transform {
+    100% {transform: translate(50%, 25%);}
+} */
+
+
+.box-4 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: black;
+    border: 2px solid green;
+    animation-name: transform;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes transform {
+    100% {transform: rotate(180deg);}
+}
+
+
+
+
+
+
+/* #enter.html */
 
 img {
     width: 100%;
@@ -138,3 +204,4 @@ img {
     from {opacity: 0%;}
     to {opacity: 100%;}
 }
+
