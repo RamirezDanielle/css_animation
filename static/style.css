@@ -73,9 +73,9 @@
 @keyframes supersize {
     /* from {width: 50px; height: 50px; background: black;}
     to {width: 50px; height: 100px; background: green;} */
-    0% {width: 10px; height: 10px; background: black;}
+    /* 0% {width: 10px; height: 10px; background: black;}
     50% {width: 20px; height: 20px; background: green;}
-    100% {width: 50px; height: 50px; background: green;}
+    100% {width: 50px; height: 50px; background: green;} */
 }
 
 /* .box-2 {
@@ -117,7 +117,7 @@
 } */
 
 
-.box-4 {
+/* .box-4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -133,8 +133,46 @@
 
 @keyframes transform {
     100% {transform: rotate(180deg);}
+} */
+
+
+
+/* #skew */
+/* .box-5 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: black;
+    border: 2px solid green;
+    animation-name: transform;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
+@keyframes transform {
+    100% {transform: skewY(50deg);}
+} */
+
+.box-6 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: black;
+    border: 2px solid green;
+    animation-name: transform;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes transform {
+    100% {transform: scaleX(0.5) scaleY(0.5) rotate(45deg) translateX(50px);}
+}
 
 
 
@@ -205,3 +243,46 @@ img {
     to {opacity: 100%;}
 }
 
+/* transform challenge */
+
+#transform-logo {
+    background: black;
+}
+
+.box {
+    animation: move 2s ease-in-out 1s infinite alternate both;
+    -moz-animation:  move 2s ease-in-out 1s infinite alternate both;
+    -ms-animation: move 2s ease-in-out 1s infinite alternate both;
+    -webkit-animation: move 2s ease-in-out 1s infinite alternate both;
+    -o-animation: move 2s ease-in-out 1s infinite alternate both;
+}
+
+
+.box-red {
+    width: 50px;
+    height: 50px;
+    background: red;
+}
+
+.box-blue {
+    width: 50px;
+    height: 50px;
+    background: blue;
+}
+
+.box-green {
+    width: 50px;
+    height: 50px;
+    background: green;
+}
+
+.box-orange {
+    width: 50px;
+    height: 50px;
+    background: orange;
+}
+
+@keyframes move {
+    100% {transform: translate(50vw,50vh) scaleX(10) skewY(60deg);}
+    
+}
